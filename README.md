@@ -1,4 +1,4 @@
-*Redundancy Detection in Text Data Using Clustering Algorithms*
+#Redundancy Detection in Text Data Using Clustering Algorithms#
 
 This project detects and removes **redundant textual data** using unsupervised machine learning clustering algorithms. The system processes textual questions, groups similar ones into clusters, and removes duplicates based on similarity thresholds.
 
