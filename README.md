@@ -229,3 +229,8 @@ The original codebase had several bugs that were corrected in `code2_fixed.py`:
 | `nltk` | Stopword removal |
 | `matplotlib` | Cluster visualization |
 | `re` | Text cleaning with regex |
+
+---
+
+## Author
+Shashank Singh
