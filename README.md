@@ -1,22 +1,21 @@
-# 🔍 Redundancy Detection in Text Data Using Clustering Algorithms
+#  Redundancy Detection in Text Data Using Clustering Algorithms
 
 A machine learning project that detects and removes redundant question pairs from the Quora Question Pairs dataset using three unsupervised clustering algorithms — **KMeans**, **DBSCAN**, and **Agglomerative Clustering**.
+This project detects and removes redundant textual data using unsupervised machine learning clustering algorithms. The system processes textual questions, groups similar ones into clusters, and removes duplicates based on similarity thresholds.
 
+The goal is to improve data quality, reduce storage, and eliminate duplicate entries in large text datasets.
 ---
 
 ## 📋 Table of Contents
 
 - [Overview](#overview)
 - [Dataset](#dataset)
-- [Project Structure](#project-structure)
-- [Installation](#installation)
 - [Usage](#usage)
 - [Methodology](#methodology)
 - [Results](#results)
 - [Visualization](#visualization)
 - [Known Fixes Applied](#known-fixes-applied)
 - [Future Work](#future-work)
-- [Course Info](#course-info)
 
 ---
 
@@ -56,61 +55,12 @@ question2: "What is Artificial Intelligence?"
 
 ---
 
-## Project Structure
-
-```
-redundancy-detection/
-│
-├── code2_fixed.py                  # Main script (fully corrected)
-├── questions.csv                   # Input dataset (download separately)
-│
-├── outputs/
-│   ├── optimized_kmeans.csv        # Deduplicated output — KMeans
-│   ├── optimized_dbscan.csv        # Deduplicated output — DBSCAN
-│   ├── optimized_agglomerative.csv # Deduplicated output — Agglomerative
-│   └── cluster_visualization.png  # Cluster scatter plots (generated)
-│
-└── README.md
-```
-
----
-
-## Installation
-
-**Requirements:** Python 3.8+
-
-### 1. Clone or download the project
-
-```bash
-git clone https://github.com/your-username/redundancy-detection.git
-cd redundancy-detection
-```
-
-### 2. Install dependencies
-
-```bash
-pip install pandas numpy scikit-learn nltk matplotlib
-```
-
-### 3. Download NLTK stopwords
-
-```python
-import nltk
-nltk.download("stopwords")
-```
-
-### 4. Download the dataset
-
-Download `questions.csv` from [Kaggle](https://www.kaggle.com/c/quora-question-pairs/data) and place it in the project root directory.
-
----
-
 ## Usage
 
 Run the full pipeline with:
 
 ```bash
-python code2_fixed.py
+python code.py
 ```
 
 This will:
@@ -266,17 +216,6 @@ The original codebase had several bugs that were corrected in `code2_fixed.py`:
 - **Supervised evaluation:** Use the provided `is_duplicate` labels to compute precision/recall against ground truth
 - **Hyperparameter tuning:** Grid search over `eps`, `min_samples`, and `threshold` for optimal redundancy removal
 - **Streaming pipeline:** Process data in batches to support real-time deduplication in production systems
-
----
-
-## Course Info
-
-| Field | Detail |
-|---|---|
-| Course | PE-II |
-| Institution | VIT Bhopal |
-| Dataset | Quora Question Pairs (7,000 rows subset) |
-| Language | Python 3 |
 
 ---
 
